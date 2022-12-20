@@ -9,7 +9,7 @@ pipeline{
         '''
       }
     }
-    stage('Dockerfile'){
+    stage('container1'){
       agent { label 'Master' }
       steps{
         sh '''
