@@ -11,7 +11,6 @@ pipeline{
     stage('Dockerfile'){
       steps{
         sh '''
-               cd /home/ubuntu/workspace1
                 docker run -it -d --name assigncontainer nginx
                 '''
   }
