@@ -13,7 +13,7 @@ pipeline{
       agent { label 'Master' }
       steps{
         sh '''
-               cd /home/ubuntu
+               cd /home/ubuntu/
                 docker run -it -d --name container1 nginx
                 '''
   }
