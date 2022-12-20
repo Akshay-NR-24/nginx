@@ -8,5 +8,13 @@ pipeline{
         '''
       }
     }
+    stage('Dockerfile'){
+      steps{
+        sh '''
+                cd /home/ubuntu
+                docker run -it -d --name assigncontainer nginx
+                '''
+  }
+}
   }
 }
