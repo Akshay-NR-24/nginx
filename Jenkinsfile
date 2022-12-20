@@ -1,7 +1,8 @@
 pipeline{
-  agent { docker {image 'nginx'}}
+  agent none; 
   stages{
     stage('nginx'){
+      agent { docker {image 'nginx'}}
       steps{
         sh '''
         nginx -v
@@ -9,8 +10,10 @@ pipeline{
       }
     }
     stage('Dockerfile'){
+      agent { label 'Master' }
       steps{
         sh '''
+               cd /home/ubuntu
                 docker run -it -d --name assigncontainer nginx
                 '''
   }
