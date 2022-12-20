@@ -1,11 +1,11 @@
 pipeline{
-  agent{ docker { image 'nginx:latest' } }
+  agent { docker {image 'nginx:latest'}}
   stages{
-    stage('log version info'){
+    stage('nginx'){
       steps{
-        sh 'sudo apt update'
-        sh 'sudo apt install nginx -y'
-        sh 'nginx --version'
+        sh '''
+        nginx -v
+        '''
       }
     }
   }
