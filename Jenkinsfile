@@ -5,7 +5,7 @@ pipeline{
       steps{
         sh '''
         nginx -v
-        build run -it -d 3964ce7b8458
+        docker build run -it -d 3964ce7b8458
         '''
       }
     }
