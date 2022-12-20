@@ -14,7 +14,7 @@ pipeline{
       steps{
         sh '''
                cd /home/ubuntu
-                docker run -it -d --name assigncontainer nginx
+                docker run -it -d --name container1 nginx
                 '''
   }
 }
